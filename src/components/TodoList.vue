@@ -15,39 +15,37 @@ export default {
     return {};
   },
   methods: {
-    setStatus(value){
-      this.$emit('setStatus',value)
-    }
-  }
+    setStatus(value) {
+      this.$emit("setStatus", value);
+    },
+  },
 };
 </script>
 
-<style>
+<style scoped>
 .todo-list {
   display: flex;
   flex-direction: column;
   padding: 10px;
   align-items: flex-start;
   justify-content: flex-start;
-
 }
 
-.filet{
+.filet {
   padding: 5px 0;
   margin: 5px 0 0 0;
-
 }
 button {
   margin: 0 5px;
-  background-color: #EEE;
-  border:none;
+  background-color: #eee;
+  border: none;
   padding: 5px 10px;
   border-radius: 3px;
 }
-button:hover{
+button:hover {
   cursor: pointer;
 }
-button:focus{
+button:focus {
   outline: none;
 }
 </style>

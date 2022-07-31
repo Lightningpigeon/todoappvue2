@@ -10,8 +10,7 @@
         :key="item.id"
         :item="item"
         :status="status"
-      >
-      </todo-item>
+      />
     </todo-list>
     <div class="footer">
       <p>Jens Rosendal Andersen - 10397811</p>
@@ -77,7 +76,7 @@ export default {
       this.db.collection("todos").add(todoItem);
     },
     checkItem(Id) {
-      let item = this.item.find((item) => item.id === Id);
+      let item = this.items.find((item) => item.id === Id);
       item.completed = !item.completed;
       this.updateTodo({ completed: item.completed, todo: item.todo });
     },

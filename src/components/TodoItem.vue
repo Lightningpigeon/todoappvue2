@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  props: ['item','status'],
+  props: ["item", "status"],
   data() {
     return {
       todo: this.item,
@@ -35,7 +35,7 @@ export default {
       this.$emit("deleteTodo", this.item.id);
     },
     updateTodo() {
-      if (this.todo.todo !== "") {
+      if (this.todo !== "") {
         this.$emit("updateTodo", this.todo);
         this.editMode = false;
       }
@@ -47,7 +47,7 @@ export default {
 
 <style>
 .todo-item {
-  padding: 10px 20px;
+  padding: 20px 20px;
   margin: 5px 0;
   font-size: 16px;
   display: flex;
@@ -68,8 +68,8 @@ export default {
 
 .controls div {
   margin: 0 5px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
