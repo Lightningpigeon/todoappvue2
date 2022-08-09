@@ -42,7 +42,7 @@ export default {
           });
         } else if (change.type == "removed") {
           this.items = this.items.filter((item) => item.id !== change.doc.id);
-        } else if (change.type === "modified") {
+        } else if (change.type == "modified") {
           this.items = this.items.map((item) => {
             if (item.id === change.doc.id) {
               return { ...change.doc.data(), id: change.doc.id };

@@ -1,5 +1,5 @@
 <template>
-  <div class="todo-item" v-show="status ==null || status == item.completed">
+  <div class="todo-item" v-show="status == null || status == item.completed">
     <div class="controls">
       <div class="edit" @click="editMode = !editMode">
         <i class="fa fa-edit"></i>
@@ -13,7 +13,7 @@
       {{ item.todo }}
     </div>
     <div>
-      <input type="checkbox" :checked="item.completed" @click="check" />
+      <input type="checkbox" :checked="item.completed" @click="check()" />
     </div>
   </div>
 </template>
@@ -35,7 +35,7 @@ export default {
       this.$emit("deleteTodo", this.item.id);
     },
     updateTodo() {
-      if (this.todo !== "") {
+      if (this.todo.todo !== "") {
         this.$emit("updateTodo", this.todo);
         this.editMode = false;
       }
